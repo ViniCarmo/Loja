@@ -10,10 +10,18 @@ public class SemDesconto extends Desconto {
     }
 
     public BigDecimal calcular(Orcamento orcamento) {
-            if (orcamento.getQuantidadeItens() > 5) {
-                return orcamento.getValor().multiply(new BigDecimal("0.1"));
-            }
+
             return BigDecimal.ZERO;
         }
+
+    @Override
+    protected BigDecimal efetuarCalculo(Orcamento orcamento) {
+        return null;
     }
+
+    @Override
+    public boolean deveAplicar(Orcamento orcamento) {
+        return true;
+    }
+}
 

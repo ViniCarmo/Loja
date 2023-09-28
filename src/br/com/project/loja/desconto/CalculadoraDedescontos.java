@@ -9,7 +9,7 @@ public class CalculadoraDedescontos {
     public BigDecimal calcular(Orcamento orcamento) {
       Desconto desconto = new DescontoQuantidadeItens(
                       new DescontoValorDosItens(
-                              new SemDesconto()));
+                                new SemDesconto()));
 
 
         return desconto.calcular(orcamento);
